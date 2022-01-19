@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 const puppeteer = require("puppeteer");
 
 (async () => {
@@ -5,14 +7,18 @@ const puppeteer = require("puppeteer");
   const page = await browser.newPage();
 
   // Sign in
-  await page.goto("https://artofproblemsolving.com/community/c1h2758890_cats_of_the_clans_reboot_to_the_reboot");
-  await page.click("#header-login")
-  await page.type(process.env.USERNAME);
-  await page.screenshot({
-    path: "./example.png"
-  })
-  //page.type()
+  await page.goto(process.env.AOPS_PM_URL);
+  await page.click("#page_error_window>.cmty-login");
+  await page.type("#login-username", process.env.AOPS_USERNAME);
+  await page.type("#login-password", process.env.AOPS_PASSWORD);
+  await page.click("#login-button");
+  await page.waitForSelector(".cmty-topic-mini-reply");
 
+  // Type something and send it
+  await page.click(".cmty-topic-mini-reply");
+  await page.type(".cmty-post-textarea", "This was sent through node.js using the code in github repo [url]https://github.com/Scotch101Tape/aops-bot-example[/url]");
+  await page.click(".cmty-submit-button");
 
+  // Close up shop
   await browser.close();
 })();

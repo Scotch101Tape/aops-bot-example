@@ -1,2 +1,3 @@
-USERNAME="[AoPS Username]"
-PASSWORD="[AoPS Password]"
+AOPS_USERNAME="[AoPS Username]"
+AOPS_PASSWORD="[AoPS Password]"
+AOPS_PM_URL="[AoPS Private Message Url]"
