@@ -1,0 +1,16 @@
+{
+  "name": "aops-bot-example",
+  "version": "1.0.0",
+  "description": "An example of a working AoPS bot running through puppeteer.",
+  "main": "src/index.js",
+  "repository": "https://github.com/Scotch101Tape/aops-bot-example",
+  "author": "Scotch101Tape <scotch101tape@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "puppeteer": "^13.1.1"
+  },
+  "scripts": {
+    "main": "node ./src/index.js"
+  }
+}
