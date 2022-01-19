@@ -1,2 +1,5 @@
 # Yarn
 node_modules
+
+# Secrets
+.env
