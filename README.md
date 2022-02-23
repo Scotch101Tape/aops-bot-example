@@ -10,7 +10,7 @@ The main script (`src/index.js`) sends a pm to the `AOPS_PM_URL` with the AoPS a
 
 ### Setup yarn
 
-Run `yarn init`
+Run `yarn install`
 
 ### Configure the .env
 
